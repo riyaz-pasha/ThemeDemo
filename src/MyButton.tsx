@@ -1,19 +1,24 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
-import { useTheme } from './ThemeProvider'
+import { useButtonTheme } from './ButtonThemeProvider'
 import { useTypography } from './TypographyProvider'
 
 const MyButton = ({ onPress, title }) => {
 
-    const { theme } = useTheme()
     const { buttonText } = useTypography()
+    const { buttonTheme } = useButtonTheme()
 
     return (
         <TouchableOpacity
-            style={{ ...styles.buttonContainer, backgroundColor: theme.primaryColor }}
+            style={{
+                ...styles.buttonContainer,
+                backgroundColor: buttonTheme.backgroundColor,
+                borderColor: buttonTheme.borderColor,
+                borderRadius: buttonTheme.borderRadius,
+            }}
             onPress={onPress}
         >
-            <Text style={buttonText}>{title}</Text>
+            <Text style={[buttonText, { color: buttonTheme.textColor }]}>{title}</Text>
         </TouchableOpacity>
     )
 }
@@ -26,7 +31,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        borderRadius: 4,
-        marginTop: 8
+        marginTop: 8,
+        borderWidth: 1,
     }
 })
