@@ -1,12 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { useButtonTheme } from './ButtonThemeProvider'
+import { useNewButtonTheme } from './NewButtonThemeProvider'
 import { useTypography } from './TypographyProvider'
 
 const MyButton = ({ onPress, title }) => {
 
     const { buttonText } = useTypography()
-    const { buttonTheme } = useButtonTheme()
+    const { buttonTheme } = useNewButtonTheme()
 
     return (
         <TouchableOpacity

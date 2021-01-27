@@ -13,7 +13,7 @@ const Screen1 = ({ navigation }) => {
             <Text style={titleText}>Screen 1</Text>
             <MyButton
                 // onPress={() => Alert.alert("Hi")}
-                onPress={() => navigation.navigate("Screen2")}
+                onPress={() => navigation.navigate("ButtonnSelectionScreen")}
                 title="Screen2"
             />
             <MyButton onPress={() => setTheme("blue")} title="blueTheme" />

@@ -11,6 +11,8 @@ import MyButtonV2 from './src2/MyButton';
 import ThemeProvider from './src/ThemeProvider';
 import TypographyProvider from './src/TypographyProvider';
 import { ButtonThemeProvider } from './src/ButtonThemeProvider';
+import ButtonnSelectionScreen from './src/ButtonnSelectionScreen';
+import { NewButtonThemeProvider } from './src/NewButtonThemeProvider';
 
 function HomeScreen({ navigation }) {
   return (
@@ -34,16 +36,18 @@ function App() {
   return (
     <ThemeProvider>
       <TypographyProvider>
-        <ButtonThemeProvider>
+        <ButtonThemeProvider><NewButtonThemeProvider>
           <NavigationContainer>
             <Stack.Navigator >
               <Stack.Screen name="Home" component={HomeScreen} />
               <Stack.Screen name="Screen1" component={Screen1} />
               <Stack.Screen name="Screen2" component={Screen2} />
+              <Stack.Screen name="ButtonnSelectionScreen" component={ButtonnSelectionScreen} />
               <Stack.Screen name="Screen1V2" component={Screen1V2} />
               <Stack.Screen name="Screen2V2" component={Screen2V2} />
             </Stack.Navigator>
           </NavigationContainer>
+        </NewButtonThemeProvider>
         </ButtonThemeProvider>
       </TypographyProvider>
     </ThemeProvider>
