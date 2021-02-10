@@ -8,7 +8,7 @@ const themes = {
         secondaryTextColor: "#0000c4",
     },
     black: {
-        backgroundColor: "##f5f5f5",
+        backgroundColor: "#f5f5f5",
         primaryColor: "#0a0a0a",
         primaryTextColor: "#ffffff",
         secondaryTextColor: "#141414",

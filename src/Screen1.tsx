@@ -1,16 +1,18 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import Svg1 from '../svg/Svg1'
 import MyButton from './MyButton'
 import { useTheme } from './ThemeProvider'
 import { useTypography } from './TypographyProvider'
 
 const Screen1 = ({ navigation }) => {
-    const { theme: { backgroundColor }, setTheme } = useTheme()
+    const { theme: { backgroundColor,primaryColor }, setTheme } = useTheme();
     const { titleText } = useTypography()
 
     return (
         <View style={{ ...styles.container, backgroundColor }}>
             <Text style={titleText}>Screen 1</Text>
+            <Svg1 />
             <MyButton
                 // onPress={() => Alert.alert("Hi")}
                 onPress={() => navigation.navigate("ButtonnSelectionScreen")}
