@@ -13,6 +13,7 @@ import TypographyProvider from './src/TypographyProvider';
 import { ButtonThemeProvider } from './src/ButtonThemeProvider';
 import ButtonnSelectionScreen from './src/ButtonnSelectionScreen';
 import { NewButtonThemeProvider } from './src/NewButtonThemeProvider';
+import { createFile, makeDirectory, readALlFiles, readDir } from './src/fileManagement';
 
 function HomeScreen({ navigation }) {
   return (
@@ -33,6 +34,11 @@ function HomeScreen({ navigation }) {
 const Stack = createStackNavigator();
 
 function App() {
+  // readDir()
+  // createFile("Theme1", { primaryColor: "theme1", secondaryColor: "theme1" });
+  // createFile("Theme2", { primaryColor: "theme2", secondaryColor: "theme2" });
+  // readALlFiles()
+  // makeDirectory();
   return (
     <ThemeProvider>
       <TypographyProvider>
