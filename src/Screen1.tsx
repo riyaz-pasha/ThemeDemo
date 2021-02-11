@@ -1,6 +1,7 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import Svg1 from '../svg/Svg1'
+import SvgXML from '../svg/SvgXML'
 import MyButton from './MyButton'
 import { useTheme } from './ThemeProvider'
 import { useTypography } from './TypographyProvider'
@@ -13,6 +14,7 @@ const Screen1 = ({ navigation }) => {
         <View style={{ ...styles.container, backgroundColor }}>
             <Text style={titleText}>Screen 1</Text>
             <Svg1 />
+            <SvgXML />
             <MyButton
                 // onPress={() => Alert.alert("Hi")}
                 onPress={() => navigation.navigate("ButtonnSelectionScreen")}
